@@ -1,0 +1,100 @@
+// Client for the Cloud Billing Catalog API.
+// https://cloud.google.com/billing/docs/reference/rest/v1/services.skus/list
+
+const API = "https://cloudbilling.googleapis.com/v1";
+
+/** Billing service ID for Cloud Spanner. */
+export const SPANNER_SERVICE_ID = "CC63-0873-48FD";
+
+export interface Money {
+	currencyCode: string;
+	units: string;
+	nanos: number;
+}
+
+export interface Sku {
+	name: string;
+	skuId: string;
+	description: string;
+	category: {
+		serviceDisplayName: string;
+		resourceFamily: string;
+		resourceGroup: string;
+		usageType: string;
+	};
+	serviceRegions: string[];
+	pricingInfo: {
+		summary: string;
+		pricingExpression: {
+			usageUnit: string;
+			usageUnitDescription: string;
+			displayQuantity: number;
+			tieredRates: { startUsageAmount: number; unitPrice: Money }[];
+		};
+		effectiveTime: string;
+	}[];
+	geoTaxonomy?: { type: string; regions?: string[] };
+}
+
+/**
+ * A failed call to the Cloud Billing API. `status` is 0 when the request never
+ * got a response (offline, DNS, CORS). `reason` is Google's machine-readable
+ * reason, e.g. `API_KEY_SERVICE_BLOCKED` or `API_KEY_HTTP_REFERRER_BLOCKED`.
+ */
+export class BillingApiError extends Error {
+	readonly status: number;
+	readonly reason: string | undefined;
+
+	constructor(message: string, status: number, reason?: string) {
+		super(message);
+		this.name = "BillingApiError";
+		this.status = status;
+		this.reason = reason;
+	}
+
+	static async from_response(res: Response): Promise<BillingApiError> {
+		const text = await res.text();
+		try {
+			const { error } = JSON.parse(text) as {
+				error: { message: string; details?: { reason?: string }[] };
+			};
+			const reason = error.details?.find((d) => d.reason)?.reason;
+			return new BillingApiError(error.message, res.status, reason);
+		} catch {
+			return new BillingApiError(
+				text || res.statusText || "Request failed",
+				res.status,
+			);
+		}
+	}
+}
+
+/** Fetches every SKU for a billing service, following pagination. */
+export async function list_skus(
+	api_key: string,
+	service_id = SPANNER_SERVICE_ID,
+	fetch_fn: typeof fetch = fetch,
+): Promise<Sku[]> {
+	const skus: Sku[] = [];
+	let page_token: string | undefined;
+	do {
+		const url = new URL(`${API}/services/${service_id}/skus`);
+		url.search = new URLSearchParams({
+			key: api_key,
+			currencyCode: "USD",
+			pageSize: "5000",
+			...(page_token && { pageToken: page_token }),
+		}).toString();
+		let res: Response;
+		try {
+			res = await fetch_fn(url);
+		} catch (e) {
+			throw new BillingApiError(e instanceof Error ? e.message : String(e), 0);
+		}
+		if (!res.ok) throw await BillingApiError.from_response(res);
+		const body: { skus?: Sku[]; nextPageToken?: string } = await res.json();
+		skus.push(...(body.skus ?? []));
+		page_token = body.nextPageToken || undefined;
+	} while (page_token);
+	return skus;
+}

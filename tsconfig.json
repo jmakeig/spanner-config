@@ -1,0 +1,9 @@
+{
+	"extends": "$app/tsconfig",
+	"compilerOptions": {
+		"strict": true,
+		"erasableSyntaxOnly": true,
+		"exactOptionalPropertyTypes": true
+	},
+	"include": ["src", "vite.config.ts"]
+}
