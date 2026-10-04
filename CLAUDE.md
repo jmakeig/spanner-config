@@ -1,21 +1,70 @@
 # Spanner Configuration Modeler
 
-This project is a browser-based tool to allow users to model configurations for Google’s Spanner database. Spanner is a distributed, managed database. Users create an _instance_.
+This project is a browser-based tool that allows users to model configurations for Google’s Spanner database.
 
-## Commands
+## Spanner
+
+Spanner is a distributed, managed database. Users create an _instance_ to provision compute and storage capacity. Instances can have multiple _databases_. Each database shares the instance’s resources.
+
+### Replicas
+
+Instances have multiple read-write _replicas_ that provide query processing and availability across multiple failure domains. A _regional_ instance configuration has replicas in three zones, all in the same region. A multi-region configuration provides 5 to 9 replicas across zones in at least two separate regions, with a minimum of two per region, along with a single _witness_ replica in another region. The witness serves to maintain quorum among replicas in the event of a partition between other replicas. _Dual-region_ is a type of multi-region configuration whose read-write replicas are located in the same jurisdiction for data residency. This is typically a single country, such as Japan or Australia.
+
+### Nodes and Processing Units
+
+A _node_ is the amount of compute allocated to each replica in an instance. Users can scale the throughput, measured in queries per second (QPS), by adding nodes to their instance. This relationship is approximately linear at any number of nodes. While a node represents the amount of CPU and RAM provided to each replica, the exact mapping to physical infrastructure is not exposed to users.
+
+A _processing unit_ is 1/1000th of a node. An instance can be configured with a minimum of 100 processing units up to thousands of nodes. There is no practical upper limit. Below one node, or 1,000 processing units, you can only scale in increments of 100 processing units, e.g., 100, 200, 300, etc. Above one node, or 1,000 processing units, you can only scale in increments of whole nodes.
+
+### Read-only Replicas
+
+In addition to read-write replicas that participate in the quorum used in transaction processing, an instance can also have _read-only replicas_. These add throughput for queries that don’t update data. Some multi-region configurations include predefined read-only replicas. Each regional and multi-region configuration also has a list of regions in which a user can add an optional read-only replica. Unlike read-write replicas, read-only replicas always have a replication factor of 1.
+
+### Geo-paritioning
+
+**TODO**
+
+### Latency
+
+Transactions, including read-only queries that need up-to-date data, require coordination among the read-write replicas in a Spanner instance. The RTT between replicas thus contributes significantly to overall latency. This is espeically important in multi-regional configurations, which require long-distance communication across geographically dispersed regions. 
+
+## User Journeys
+
+### Select an instance configuration
+
+The tool guides the user through a set of qualification questions to determine the appropriate instance configuration. The primiary dimensions are 
+
+* **Availability**
+* **Latency**
+* **Cost**
+* **Data Residency**
+
+#### Add optional replicas
+
+The user optionally adds read-only eligible replicas to the base configuration. 
+
+### Price out an instance configuration
+
+Given a replica configuration, allow the user to specify the number nodes and the amount of storage in order to calculate a total cost based on the real-time prices from the pre-loaded Billing API.
+
+## Technical Specifications
+
+### Commands
 
 - `npm run dev`: start the dev server
 - `npm run build`: build the static site into `build/`
 - `npm run preview`: serve the production build locally
+- `npm run stop` (or `npm stop`): kill this project's Vite dev and preview servers
 - `npm run check`: type-check with svelte-check
 - `npm run format` / `npm run format:check`: format or check `src/` with Prettier (tabs, semicolons; see `.prettierrc`)
-## Naming conventions
+
+### Naming conventions
 
 - TypeScript variables, functions, parameters, and methods use `lower_snake_case` (`list_skus`, `page_token`), not `lowerCamelCase`.
 - Types, interfaces, and classes stay `PascalCase` (`Sku`, `BillingApiError`); module-level constants stay `UPPER_SNAKE_CASE` (`SPANNER_SERVICE_ID`).
 - Exceptions, where the name isn't ours to choose: names SvelteKit requires (`load`, `handleError`, `ssr`, `variables`, `defineEnvVars`), DOM/library APIs, and object keys that mirror external JSON (Google's `skuId`, `pricingInfo`, `nextPageToken`, and query params like `pageToken`).
 
-## Architecture
+### Architecture
 
 - SvelteKit 3 + Svelte 5 (runes forced on) + TypeScript. Kit 3 has no `svelte.config.js`; Kit options, including the adapter, are passed to `sveltekit()` in `vite.config.ts`.
 - Client-only SPA: `adapter-static` with `fallback: '200.html'` plus `export const ssr = false` in `src/routes/+layout.ts`. Do not add server code (`+page.server.ts`, `+server.ts`, `hooks.server.ts`); there is no server at runtime. The static host must serve `200.html` for unknown paths.
