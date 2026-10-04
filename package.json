@@ -11,7 +11,8 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write src",
-		"format:check": "prettier --check src"
+		"format:check": "prettier --check src",
+		"stop": "pkill -f \"$PWD/node_modules/[.]bin/vite\" && echo \"Stopped Vite servers\" || echo \"No Vite servers running\""
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^4.0.0",

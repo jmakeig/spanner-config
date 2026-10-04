@@ -13,5 +13,9 @@ export default defineConfig({
 			// SPA mode: unknown URLs fall back to this shell and route on the client.
 			adapter: adapter({ fallback: '200.html' })
 		})
-	]
+	],
+	// Fail instead of silently moving to the next free port. The API key's
+	// website restrictions only allow these exact ports.
+	server: { port: 5173, strictPort: true },
+	preview: { port: 4173, strictPort: true }
 });
