@@ -37,10 +37,18 @@
 // `sku_loader_machine.provide({ actors: { ... } })`.
 
 import { assign, fromPromise, setup } from "xstate";
-import { list_skus, type Sku } from "#lib/billing.ts";
+import { BILLING_API_VERSION, list_skus, type Sku } from "#lib/billing.ts";
 
-/** Bump the version suffix if the stored shape changes, to drop old entries. */
-export const SKU_CACHE_KEY = "spanner-config:skus:v1";
+const SKU_CACHE_PREFIX = "spanner-config:skus:";
+
+/** Bump if `CachedSkus` changes shape. */
+const SKU_CACHE_FORMAT = 1;
+
+/**
+ * Versioned by both the remote API and our storage format, so a change to
+ * either makes old entries unreachable. `write_cache` deletes them.
+ */
+export const SKU_CACHE_KEY = `${SKU_CACHE_PREFIX}api-${BILLING_API_VERSION}:format-${SKU_CACHE_FORMAT}`;
 
 export interface CachedSkus {
 	/** When the SKUs were fetched from the API, in ms since the epoch. */
@@ -94,14 +102,31 @@ export const sku_loader_machine = setup({
 		read_cache: fromPromise<CachedSkus | null>(async () => {
 			const raw = globalThis.localStorage.getItem(SKU_CACHE_KEY);
 			if (!raw) return null;
-			const parsed: unknown = JSON.parse(raw);
+			let parsed: unknown;
+			try {
+				parsed = JSON.parse(raw);
+			} catch {
+				parsed = undefined; // Corrupt JSON is a miss, same as a bad shape.
+			}
 			if (is_cached_skus(parsed)) return parsed;
 			globalThis.localStorage.removeItem(SKU_CACHE_KEY);
 			return null;
 		}),
 		// Rejects if storage is unavailable or full (the list is ~1 MB).
 		write_cache: fromPromise<void, CachedSkus>(async ({ input }) => {
-			globalThis.localStorage.setItem(SKU_CACHE_KEY, JSON.stringify(input));
+			// Drop entries from older API or format versions first: they're never
+			// read again, and at ~1 MB each they'd eat into the storage quota.
+			const storage = globalThis.localStorage;
+			const stale = Array.from({ length: storage.length }, (_, i) =>
+				storage.key(i),
+			).filter(
+				(key): key is string =>
+					key !== null &&
+					key.startsWith(SKU_CACHE_PREFIX) &&
+					key !== SKU_CACHE_KEY,
+			);
+			for (const key of stale) storage.removeItem(key);
+			storage.setItem(SKU_CACHE_KEY, JSON.stringify(input));
 		}),
 		fetch_skus: fromPromise<Sku[], { api_key: string; signal: AbortSignal }>(
 			// `signal` aborts if the actor is stopped (e.g. the app shuts the loader

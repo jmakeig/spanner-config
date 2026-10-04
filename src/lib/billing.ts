@@ -1,7 +1,10 @@
 // Client for the Cloud Billing Catalog API.
 // https://cloud.google.com/billing/docs/reference/rest/v1/services.skus/list
 
-const API = "https://cloudbilling.googleapis.com/v1";
+/** Cloud Billing API version. Also part of the SKU cache key, so changing it drops cached responses. */
+export const BILLING_API_VERSION = "v1";
+
+const API = `https://cloudbilling.googleapis.com/${BILLING_API_VERSION}`;
 
 /** Billing service ID for Cloud Spanner. */
 export const SPANNER_SERVICE_ID = "CC63-0873-48FD";
