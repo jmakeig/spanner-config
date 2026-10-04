@@ -8,19 +8,37 @@
 
 	const snapshot = $derived(sku_loader.snapshot);
 	const load = () => sku_loader.send({ type: "LOAD" });
+	const reload = () => sku_loader.send({ type: "RELOAD" });
 	const cancel = () => sku_loader.send({ type: "CANCEL" });
+
+	const format_date = (ms: number) =>
+		new Date(ms).toLocaleString(undefined, {
+			dateStyle: "medium",
+			timeStyle: "short",
+		});
 </script>
 
 {#if snapshot.matches("uninitialized")}
 	<p>Spanner prices aren't loaded.</p>
 	<button onclick={load}>Load prices</button>
+{:else if snapshot.matches("reading_cache")}
+	<p aria-live="polite">Checking for saved prices…</p>
+{:else if snapshot.matches("writing_cache")}
+	<p aria-live="polite">Saving prices…</p>
 {:else if snapshot.matches({ loading: "cancelling" })}
 	<p aria-live="polite">Cancelling…</p>
 {:else if snapshot.matches("loading")}
 	<p aria-live="polite">Loading Spanner prices from Google Cloud…</p>
 	<button onclick={cancel}>Cancel</button>
 {:else if snapshot.matches("loaded")}
+	{@const fetched_at = snapshot.context.fetched_at}
 	<h1>Cloud Spanner SKUs ({snapshot.context.skus.length})</h1>
+	<p>
+		{#if fetched_at !== null}
+			Prices as of {format_date(fetched_at)}.
+		{/if}
+		<button onclick={reload}>Reload prices</button>
+	</p>
 	<pre>{JSON.stringify(snapshot.context.skus, null, 2)}</pre>
 {:else if snapshot.matches("error")}
 	{@const error = snapshot.context.error}

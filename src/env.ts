@@ -12,4 +12,20 @@ export const variables = defineEnvVars({
 			return value;
 		},
 	},
+	SKU_CACHE_MAX_AGE_HOURS: {
+		public: true,
+		static: true,
+		description:
+			"How long SKUs cached in localStorage are reused before refetching from the API, in hours. Defaults to 336 (two weeks); 0 always refetches.",
+		schema: (value) => {
+			if (value === undefined || value.trim() === "") return 14 * 24;
+			const hours = Number(value);
+			if (!Number.isFinite(hours) || hours < 0) {
+				throw new Error(
+					`SKU_CACHE_MAX_AGE_HOURS must be a non-negative number of hours, got "${value}"`,
+				);
+			}
+			return hours;
+		},
+	},
 });
