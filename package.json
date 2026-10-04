@@ -10,7 +10,7 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"format": "prettier --write src",
+		"format": "prettier --write --list-different src",
 		"format:check": "prettier --check src",
 		"stop": "pkill -f \"$PWD/node_modules/[.]bin/vite\" && echo \"Stopped Vite servers\" || echo \"No Vite servers running\""
 	},
