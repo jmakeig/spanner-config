@@ -1,0 +1,1502 @@
+[
+    {
+        "configuration": "africa-south1",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "africa-south1",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "asia-east1",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "asia-east1",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "asia-east2",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "asia-east2",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "asia-northeast1",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "asia-northeast1",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "asia-northeast2",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "asia-northeast2",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "asia-northeast3",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "asia-northeast3",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "asia-south1",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "asia-south1",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "asia-south2",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "asia-south2",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "asia-southeast1",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "asia-southeast1",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "asia-southeast2",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "asia-southeast2",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "australia-southeast1",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "australia-southeast1",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "australia-southeast2",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "australia-southeast2",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "europe-central2",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "europe-central2",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "europe-north1",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "europe-north1",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "europe-southwest1",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "europe-southwest1",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "europe-west1",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "europe-west1",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "europe-west10",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "europe-west10",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "europe-west12",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "europe-west12",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "europe-west2",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "europe-west2",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "europe-west3",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "europe-west3",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "europe-west4",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "europe-west4",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "europe-west6",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "europe-west6",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "europe-west8",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "europe-west8",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "europe-west9",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "europe-west9",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "me-central1",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "me-central1",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "me-central2",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "me-central2",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "me-west1",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "me-west1",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "northamerica-northeast1",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "northamerica-northeast1",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "northamerica-northeast2",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "northamerica-northeast2",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "southamerica-east1",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "southamerica-east1",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "southamerica-west1",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "southamerica-west1",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "us-central1",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-central1",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "us-east1",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-east1",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "us-east4",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-east4",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "us-east5",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-east5",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "us-south1",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-south1",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "us-west1",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-west1",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "us-west2",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-west2",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "us-west3",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-west3",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "us-west4",
+        "eligible_editions": [
+            "standard",
+            "enterprise",
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-west4",
+                    "role": "rw",
+                    "factor": 3,
+                    "is_leader": true
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "asia1",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "asia-northeast1",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "asia-northeast2",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "asia-northeast3",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "asia2",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "asia-south1",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "asia-south2",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "asia-southeast1",
+                    "role": "rw",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "eur3",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "europe-west1",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "europe-west4",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "europe-north1",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "eur5",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "europe-west2",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "europe-west1",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "europe-west4",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "eur6",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "europe-west4",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "europe-west3",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "europe-west6",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "nam-eur-asia1",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-central1",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "us-central2",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "europe-west1",
+                    "role": "ro",
+                    "factor": 2
+                },
+                {
+                    "region": "asia-east1",
+                    "role": "ro",
+                    "factor": 2
+                },
+                {
+                    "region": "us-east1",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "nam-eur-asia3",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-central1",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "us-east1",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "europe-west1",
+                    "role": "ro",
+                    "factor": 1
+                },
+                {
+                    "region": "europe-west4",
+                    "role": "ro",
+                    "factor": 1
+                },
+                {
+                    "region": "asia-east1",
+                    "role": "ro",
+                    "factor": 2
+                },
+                {
+                    "region": "us-central2",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "nam3",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-east4",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "us-east1",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "us-central1",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "nam6",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-central1",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "us-east1",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "us-west1",
+                    "role": "ro",
+                    "factor": 1
+                },
+                {
+                    "region": "us-west2",
+                    "role": "ro",
+                    "factor": 1
+                },
+                {
+                    "region": "us-central2",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "nam7",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-central1",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "us-east4",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "us-central2",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "nam8",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-west2",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "us-west1",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "us-west3",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "nam9",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-east4",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "us-central1",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "us-west1",
+                    "role": "ro",
+                    "factor": 2
+                },
+                {
+                    "region": "us-east1",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "nam10",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-central1",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "us-west3",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "us-central2",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "nam11",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-central1",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "us-east1",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "us-central2",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "nam12",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-central1",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "us-east4",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "us-west1",
+                    "role": "ro",
+                    "factor": 2
+                },
+                {
+                    "region": "us-central2",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "nam13",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-central2",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "us-central1",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "us-west3",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "nam14",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-east4",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "northamerica-northeast1",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "us-east1",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "nam15",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-south1",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "us-east4",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "us-central1",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "nam16",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-central1",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "us-east4",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "us-east5",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "nam22",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-east5",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "us-east1",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "us-east4",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "nam23",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "us-central1",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "us-west4",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "us-south1",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "australia1",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "australia-southeast1",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "australia-southeast2",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "australia-southeast1",
+                    "role": "w",
+                    "factor": 1
+                },
+                {
+                    "region": "australia-southeast2",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "germany1",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "europe-west10",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "europe-west3",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "europe-west10",
+                    "role": "w",
+                    "factor": 1
+                },
+                {
+                    "region": "europe-west3",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "india1",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "asia-south1",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "asia-south2",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "asia-south1",
+                    "role": "w",
+                    "factor": 1
+                },
+                {
+                    "region": "asia-south2",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    },
+    {
+        "configuration": "japan1",
+        "eligible_editions": [
+            "plus"
+        ],
+        "replicas": {
+            "built_in": [
+                {
+                    "region": "asia-northeast1",
+                    "role": "rw",
+                    "factor": 2,
+                    "is_leader": true
+                },
+                {
+                    "region": "asia-northeast2",
+                    "role": "rw",
+                    "factor": 2
+                },
+                {
+                    "region": "asia-northeast1",
+                    "role": "w",
+                    "factor": 1
+                },
+                {
+                    "region": "asia-northeast2",
+                    "role": "w",
+                    "factor": 1
+                }
+            ],
+            "optional": []
+        }
+    }
+]
